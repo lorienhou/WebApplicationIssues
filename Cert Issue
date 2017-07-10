@@ -1,0 +1,12 @@
+SSL Handshake related exception:
+
+Most likely certificate issue.
+Check:
+- if cert is expired: access targeted site, view cert from Inspect Element -> Security, and see validity dates
+- if cert is missing in keystore (location configured on container (WebLogic -> instance -> keystore etc.))
+- if cert is different than the one used on targeted site
+
+Cert can be exported from webpage.
+Use "keytool" to edit keystore and certs.
+
+Servers need restart in order for updated keystores to take effect.
