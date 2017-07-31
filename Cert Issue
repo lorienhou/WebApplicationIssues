@@ -10,3 +10,7 @@ Cert can be exported from webpage.
 Use "keytool" to edit keystore and certs.
 
 Servers need restart in order for updated keystores to take effect.
+
+Can schedule scripts to monitor SSL cert for urls. 
+  curl -vks https://panhp.bigmachines.com  2>&1 | awk -Fdate: '/[e]xpire/ {print $2}'
+  Sep 29 23:59:59 2018 GMT
